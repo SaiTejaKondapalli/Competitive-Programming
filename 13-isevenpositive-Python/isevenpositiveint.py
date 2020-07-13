@@ -6,4 +6,4 @@
 
 def isevenpositiveint(x):
 	# your code goes here
-	pass
+	return isinstance(x,int)
