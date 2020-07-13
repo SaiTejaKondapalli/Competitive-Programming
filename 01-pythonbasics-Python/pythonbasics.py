@@ -1,5 +1,5 @@
 # Write a function called "show_excitement" where the string
-# "I am super excited for this course!" is returned exactly
+# "I am super excited for this course! " is returned exactly
 # 5 times, where each sentence is separated by a single space.
 # Return the string with "return".
 # You can only have the string once in your code.
@@ -8,4 +8,4 @@
 
 def show_excitement():
     # Your code goes here!
-    pass
+    return "I am super excited for this course! " * 5
