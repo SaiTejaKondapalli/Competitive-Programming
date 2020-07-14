@@ -12,5 +12,5 @@ def fun_set_kth_digit(n, k, d):
 			l.insert(k + 1, d)
 		else:
 			l.insert(k, d)
-		return int(''.join(l))
+		return ''.join(l)
 
