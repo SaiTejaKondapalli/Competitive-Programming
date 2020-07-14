@@ -40,9 +40,15 @@ class LinkedList{
 		this.head = new_element;
 	}
 
-	public Element delete_first(){
-		return this.head;
-	   // "Delete the first (head) element in the LinkedList as return it"
+	public Element delete_first() {
+		if (this.head == null) {
+			return null;
+		}
+		Element temp = this.head;
+		this.head = this.head.next;
+		return temp;
+		// "Delete the first (head) element in the LinkedList as return it"
+
 	}
 }
 
@@ -59,7 +65,8 @@ public class stacks{
 	}
 
 	public Element pop() {
-		return new Element(5);
+		// return new Element(5);
+		return ll.delete_first();
 	}
 	public static void main(String[] args) {
 
