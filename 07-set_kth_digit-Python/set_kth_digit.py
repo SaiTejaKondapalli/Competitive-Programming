@@ -7,10 +7,7 @@
 
 
 def fun_set_kth_digit(n, k, d):
-		l = list(str(n))
-		if n < 0:
-			l.insert(k + 1, d)
-		else:
-			l.insert(k, d)
-		return ''.join(l)
+		l = str(n)[::-1]
+		s = l[:k]+str(d)+l[k+1:]
+		return int(''.join(l)[::-1])
 
