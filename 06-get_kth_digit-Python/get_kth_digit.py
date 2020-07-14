@@ -8,4 +8,4 @@
 def fun_get_kth_digit(digit, k):
 	if k > len(str(abs(digit)))-1:
 		return 0
-	return str(abs(digit))[::-1][k]
+	return int(str(abs(digit))[::-1][k])
