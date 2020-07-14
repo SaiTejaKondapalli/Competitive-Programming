@@ -5,7 +5,14 @@
 
 public class IsPerfectSquare {
 	public boolean isPerfectSquare(int n) {
-		// Your code goes here
-		return false;
+       // Your code goes here
+       if (n >= 0) {
+          double s = Math.sqrt(n);
+          if (s - Math.floor(s) == 0) {
+             return true;
+          }
+          return false;
+       }
+       return false;
 	}
 }
