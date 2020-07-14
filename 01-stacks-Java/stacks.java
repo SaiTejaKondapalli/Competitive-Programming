@@ -35,7 +35,9 @@ class LinkedList{
 	}
 
 	public void insert_first(Element new_element){
-		 // "Insert new element as the head of the LinkedList"
+		// "Insert new element as the head of the LinkedList"
+		new_element.next = this.head;
+		this.head = new_element;
 	}
 
 	public Element delete_first(){
@@ -52,10 +54,14 @@ public class stacks{
 	}
 
 	public void push(Element e){
-		 // "Push (add) a new element onto the top of the stack"
+		// "Push (add) a new element onto the top of the stack"
+		 ll.insert_first(e);
 	}
 
-	public Element pop(){
+	public Element pop() {
 		return new Element(5);
+	}
+	public static void main(String[] args) {
+
 	}
 }
