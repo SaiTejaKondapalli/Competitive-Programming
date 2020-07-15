@@ -31,13 +31,12 @@
 def playstep2(hand, dice):
 	# your code goes here
 	h = sorted(list(str(hand)), reverse=True)
-	print(h)
 	d = list(str(dice))
 	if len(set(h)) == 1:
 		return hand, dice
 	if len(set(h)) == 2:
 		if h[0] == h[1]:
-			h.remove(h[3])
+			h.remove(h[2])
 			h.append(d[-1])
 			d.remove(d[-1])
 			return int(''.join(h.sort(reverse=True))), int(''.join(d))
