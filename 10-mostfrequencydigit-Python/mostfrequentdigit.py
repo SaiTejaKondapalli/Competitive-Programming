@@ -6,9 +6,9 @@ def mostfrequentdigit(n):
 	# your code goes here
 	# return int(max(set(list(str(n))),key = list(str(n)).count))
 	d = {}
-	for i in str(n):
+	for i in list(str(n)):
 		if i not in d:
-			d[i] = count(i)
+			d[i] = list(str(n)).count(i)
 	maximum = max(d.values())
 	l = []
 	for i in d:
