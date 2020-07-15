@@ -31,33 +31,33 @@
 def playstep2(hand, dice):
 	# your code goes here
 	h = sorted(list(str(hand)), reverse=True)
-	d = list(str(dice))
+	d = str(dice)
 	if len(set(h)) == 1:
 		return hand, dice
 	if len(set(h)) == 2:
 		if h[0] == h[1]:
 			h.remove(h[2])
 			h.append(d[-1])
-			d.remove(d[-1])
+			d = d[:-1]
 			print(h,d)
-			return int(''.join(h.sort(reverse=True))), int(''.join(d))
+			return int(''.join(h.sort(reverse=True))), int(d)
 		if h[1] == h[2]:
 			h.remove(h[0])
 			h.append(d[-1])
-			d.remove(d[-1])
+			d = d[:-1]
 			h.sort(reverse = True)
 			print(h,d)
-			return int(''.join(h)), int(''.join(d))
+			return int(''.join(h)), int(d)
 	if len(set(h)) == 3:
 		h.remove(h[-1])
 		h.remove(h[-1])
 		h.append(d[-1])
-		d.remove(d[-1])
+		d = d[:-1]
 		h.append(d[-1])
-		d.remove(d[-1])
+		d = d[:-1]
 		h.sort(reverse=True)
 		print(h,d)
-		return int(''.join(h)), int(''.join(d))
+		return int(''.join(h)), int(d)
 
 
 
