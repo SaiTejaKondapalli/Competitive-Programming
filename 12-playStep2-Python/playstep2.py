@@ -30,7 +30,8 @@
 
 def playstep2(hand, dice):
 	# your code goes here
-	h = sorted(list(str(hand)),reverse=True)
+	h = sorted(list(str(hand)), reverse=True)
+	print(h)
 	d = list(str(dice))
 	if len(set(h)) == 1:
 		return hand, dice
