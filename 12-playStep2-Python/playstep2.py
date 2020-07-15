@@ -42,19 +42,21 @@ def playstep2(hand, dice):
 			print(h,d)
 			return int(''.join(h.sort(reverse=True))), int(''.join(d))
 		if h[1] == h[2]:
-			h.remove(h[1])
+			h.remove(h[0])
 			h.append(d[-1])
 			d.remove(d[-1])
-			print(int(''.join(h.sort(reverse=True))),d)
-			return int(''.join(h.sort(reverse=True))), int(''.join(d))
+			h.sort(reverse = True)
+			print(h,d)
+			return int(''.join(h)), int(''.join(d))
 	if len(set(h)) == 3:
 		h.remove(h[1])
-		h.remove(h[2])
-		d.append(d[-1])
+		h.remove(h[1])
+		h.append(d[-1])
 		d.remove(d[-1])
-		d.append(d[-1])
+		h.append(d[-1])
 		d.remove(d[-1])
-		return int(''.join(h.sort(reverse=True))), int(''.join(d))
+		h.sort(reverse=True)
+		return int(''.join(h)), int(''.join(d))
 
 
 
