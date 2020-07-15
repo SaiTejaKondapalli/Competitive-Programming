@@ -5,10 +5,13 @@
 def mostfrequentdigit(n):
 	# your code goes here
 	# return int(max(set(list(str(n))),key = list(str(n)).count))
-	maximum = 0
-	res = str(n)[0]
+	d = {}
 	for i in str(n):
-		if count(i) > maximum:
-			maximum = count(i)
-			res = i
-	return int(res)
+		if i not in d:
+			d[i] = count(i)
+	maximum = max(d.values())
+	l = []
+	for i in d:
+		if d[i] == maximum:
+			l.append(i)
+	return min(l)
