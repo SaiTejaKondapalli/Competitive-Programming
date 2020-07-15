@@ -13,16 +13,22 @@
 # assert(ishappynumber(98) == False)
 # assert(ishappynumber(404) == True)
 # assert(ishappynumber(405) == False)
-
-def ishappynumber(n):
-	# your code goes here
-	if n < 0:
-		return False
+def sumdigits(n):
 	summ = 0
 	while n > 0:
 		dig = n % 10
-		summ = dig ** 2
-		if summ == n:
+		summ += dig * dig
+		n = n // 10
+	return summ
+def ishappynumber(n):
+	# your code goes here
+	s = set()
+	s.add(n)
+	while True:
+		if n == 1:
+			return True
+		n = sumdigits(n)
+		if n in s:
 			return False
-		n /= 10
-	return summ == 1
+		s.add(n)
+	return False
