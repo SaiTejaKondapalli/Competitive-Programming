@@ -49,13 +49,14 @@ def playstep2(hand, dice):
 			print(h,d)
 			return int(''.join(h)), int(''.join(d))
 	if len(set(h)) == 3:
-		h.remove(h[1])
-		h.remove(h[1])
+		h.remove(h[-1])
+		h.remove(h[-1])
 		h.append(d[-1])
 		d.remove(d[-1])
 		h.append(d[-1])
 		d.remove(d[-1])
 		h.sort(reverse=True)
+		print(h,d)
 		return int(''.join(h)), int(''.join(d))
 
 
