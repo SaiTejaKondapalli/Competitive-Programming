@@ -11,6 +11,6 @@ def fun_nearestodd(n):
 	if (n / 2) % 2 == 0:
 		return int(numpy.floor(n) // 2 * 2 - 1)
 	else:
-		int(numpy.ceil(n) // 2 * 2 + 1)
+		return int(numpy.ceil(n) // 2 * 2 + 1)
 
 
