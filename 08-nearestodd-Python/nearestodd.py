@@ -4,14 +4,13 @@
 # Note that the result must be an int, so nearestOdd(13.0) is the int 13, and not the float 13.0.
 
 
-import math
+import numpy
 def fun_nearestodd(n):
-	if (n / 2) % 2 == 0:
-		return int(math.round(n / 2) * 2 - 1)
-	else:
-		if int(n) % 2 == 1:
+	if int(n) % 2 == 1:
 			return int(n)
-		else:
-			return int(math.round(n / 2) * 2 - 1)
+	if (n / 2) % 2 == 0:
+		return int(numpy.floor(n) // 2 * 2 - 1)
+	else:
+		int(numpy.ceil(n) // 2 * 2 + 1)
 
 
