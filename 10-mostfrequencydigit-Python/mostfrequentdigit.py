@@ -14,4 +14,4 @@ def mostfrequentdigit(n):
 	for i in d:
 		if d[i] == maximum:
 			l.append(i)
-	return min(l)
+	return int(min(l))
