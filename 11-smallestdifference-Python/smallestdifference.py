@@ -7,7 +7,7 @@
 def smallestdifference(a):
 	# Your code goes here
 	if len(a) == 0:
-		return - 1
+		return -1
 	a = a.sort()
-	diff = abs(a[0]-a[1])
+	diff = abs(a[0]-a[1])-1
 	return diff
