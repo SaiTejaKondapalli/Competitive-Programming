@@ -5,8 +5,9 @@
 
 
 def fun_replace(s1, s2, s3):
-	if s2 in s1:
-		pos = s1.index(s2)
-		print(pos)
-		s =  s1[0:pos]+s2+s1[pos+len(s2):]
-		return s
+	# if s2 in s1:
+	# 	pos = s1.index(s2)
+	# 	print(pos)
+	# 	return s1[0:pos] + s3 + s1[pos + len(s2):]
+	# return s1
+	return s1.replace(s2,s3)
