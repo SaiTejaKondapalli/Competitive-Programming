@@ -15,8 +15,8 @@ def fun_applycaesarcipher(msg, shift):
 	for i in range(len(msg)):
 		char = msg[i]
 		if char == ' ':
-			res += ' '
-		if char.isupper():
+			res += " "
+		elif char.isupper():
 			res += chr((ord(char) + shift - 65) % 26 + 65)
 		else:
 			res += chr((ord(char) + shift - 97) % 26 + 97)
