@@ -14,8 +14,8 @@ def sumofdigits(n):
 	summ = 0
 	while n > 0:
 		dig = n % 10
-		summ = dig * dig
-		n /= 10
+		summ += dig * dig
+		n = n // 10
 	return summ
 def happy(n):
 	s = set()
@@ -30,11 +30,10 @@ def happy(n):
 	return False
 def fun_nth_happy_number(n):
 	count = 0
-	i = 0
+	if n == 0:
+		return 1
+	i = 2
 	while True:
-		if i == 0:
-			i += 1
-			return 1
 		if happy(i):
 			count += 1
 			if count == n:
