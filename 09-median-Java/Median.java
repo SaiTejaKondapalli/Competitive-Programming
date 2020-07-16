@@ -7,14 +7,16 @@ public class Median {
 	public int median(double[] list) {
 		// Your code goes here
 		int l = list.length;
-		if(l == 0)
+		if (l == 0)
 			return 0;
 		else {
 			if (l % 2 != 0) {
 				return (int) list[l / 2];
 			}
-			return (int)(list[l / 2 - 1] + list[l / 2]) / 2;
+			return (int) (list[l / 2 - 1] + list[l / 2]) / 2;
 		}
+	}
+	public static void main(String[] args) {
 
 	}
 }
