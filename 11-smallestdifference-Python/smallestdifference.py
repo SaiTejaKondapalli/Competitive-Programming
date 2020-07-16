@@ -9,4 +9,5 @@ def smallestdifference(a):
 	if len(a) == 0:
 		return - 1
 	a = a.sort()
-	return a[0]-a[1]
+	diff = abs(a[0]-a[1])
+	return diff
