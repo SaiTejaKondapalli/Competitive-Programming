@@ -9,4 +9,4 @@ def median(a):
 		return None
 	if len(a) % 2 != 0:
 		return a[math.floor(len(a) / 2)]
-	return (a[len(a)/2]+a[(len(a)/2)+1])/2.0
+	return (a[len(a)//2-1]+a[(len(a)//2)])/2.0
