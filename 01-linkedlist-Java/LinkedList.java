@@ -58,12 +58,24 @@ public class LinkedList{
 			}
 			curr = curr.next;
 		}
-
-
 	}
 
-	public void delete(int value){
+	public void delete(int value) {
 		// Delete the first node with a given value.
 		// Your code goes here
+		Element curr = head;
+		Element prev = null;
+		if (curr != null && curr.value == value) {
+			head = curr.next;
+			return;
+		}
+		while (curr.next != null && curr.value != value) {
+			prev = curr;
+			curr = curr.next;
+		}
+		if (curr == null) {
+			return;
+
+		}
 	}
 }
