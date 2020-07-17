@@ -12,7 +12,7 @@ class HashTable(object):
         the table."""
         # Hash Value = (ASCII Value of First Letter * 100) + ASCII Value of Second Letter
         # Your code goes here
-        d[calculate_hash_value(string)] = string
+        self.d[self.calculate_hash_value(string)] = string
 
 
     def lookup(self, string):
