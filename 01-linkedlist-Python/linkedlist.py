@@ -19,8 +19,8 @@ class LinkedList(object):
 
     def append(self, new_element):
         # Your code goes here
-        new_element.next = this.head
-        head = new_element
+        new_element.next = self.head
+        self.head = new_element
 
 
     def get_position(self, position):
@@ -29,8 +29,8 @@ class LinkedList(object):
         Return "None" if position is not in the list."""
         # Your code goes here
         count = 0
-        temp = head
-        while temp != null:
+        temp = self.head
+        while temp != None:
             count += 1
             if count == position:
                 return temp.value
