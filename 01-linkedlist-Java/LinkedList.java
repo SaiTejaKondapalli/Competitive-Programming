@@ -21,7 +21,6 @@ public class LinkedList{
 			temp = temp.next;
 		}
 		temp.next = new_element;
-
 	}
 
 	public Element get_position(int position){
@@ -29,7 +28,16 @@ public class LinkedList{
         // Assume the first position is "1".
         // Return null if position is not in the list
 		// Your code goes here
+		int count = 0;
+		Element curr = head;
+		while (curr.next != null) {
+			if (count == position - 1) {
+				return curr;
+			}
+			curr = curr.next;
+		}
 		return null;
+
 	}
 
 	public void insert(Element new_element, int position){
