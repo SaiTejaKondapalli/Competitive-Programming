@@ -8,5 +8,5 @@
 def isrotation(x, y):
 	# Your code goes here
 	if len(str(x)) == len(str(y)):
-
 		return str(y) in str(x) + str(x) or str(y)[::-1] == str(x)
+	return False
