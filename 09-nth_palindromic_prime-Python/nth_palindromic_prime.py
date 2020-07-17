@@ -11,12 +11,18 @@ def isprime(n):
 			count +=1
 	return count == 2
 def ispalindrome(n):
-	return n[::-1] == n
+	# return n[::-1] == n
+	temp = n
+	rev = 0
+	while n > 0:
+		rev = rev * 10 + n % 10
+		n = n // 10
+	return rev == n
 def fun_nth_palindromic_prime(n):
 	count = 0
 	i = 0
 	while True:
-		if isprime(i) and ispalindrome(str(i)):
+		if isprime(i) and ispalindrome(i):
 			if count == n:
 				return i
 			count += 1
