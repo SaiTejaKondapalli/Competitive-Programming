@@ -34,6 +34,7 @@ public class LinkedList{
 			if (count == position - 1) {
 				return curr;
 			}
+			count += 1;
 			curr = curr.next;
 		}
 		return null;
@@ -46,6 +47,18 @@ public class LinkedList{
        // Inserting at position 3 means between
        // the 2nd and 3rd elements."""
 		// Your code goes here
+		int count = 0;
+		Element curr = head;
+		while (curr.next != null) {
+			count += 1;
+			if (count == position - 1) {
+				Element temp = curr.next;
+				curr.next = new_element;
+				new_element.next = temp;
+			}
+			curr = curr.next;
+		}
+
 
 	}
 
