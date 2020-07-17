@@ -69,13 +69,10 @@ public class LinkedList{
 			head = curr.next;
 			return;
 		}
-		while (curr.next != null && curr.value != value) {
+		while (curr != null && curr.value != value) {
 			prev = curr;
 			curr = curr.next;
 		}
-		if (curr == null) {
-			return;
-
-		}
+		if (curr == null) return;
 	}
 }
