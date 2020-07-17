@@ -7,4 +7,5 @@
 
 def isrotation(x, y):
 	# Your code goes here
-	return str(y) in str(x) + str(x)
+	if len(str(x)) == len(str(y)):
+		return str(y) in str(x) + str(x)
