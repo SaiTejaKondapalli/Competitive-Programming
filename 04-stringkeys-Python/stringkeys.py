@@ -19,7 +19,8 @@ class HashTable(object):
         string is already in the table.
         Return -1 otherwise."""
         # Your code goes here
-        if self.calculate_hash_value(string) in self.table:
+        # if self.calculate_hash_value(string) in self.table:
+        if self.calculate_hash_value(string):
             return self.calculate_hash_value(string)
         return -1
 
