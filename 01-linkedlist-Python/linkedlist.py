@@ -44,8 +44,8 @@ class LinkedList(object):
         the 2nd and 3rd elements."""
         # Your code goes here
         count = 0
-        curr = head
-        while (curr != null):
+        curr = self.head
+        while (curr != None):
             count += 1
             if count == position - 1:
                 temp = curr.next
@@ -56,6 +56,6 @@ class LinkedList(object):
     def delete(self, value):
         """Delete the first node with a given value."""
         # Your code goes here
-        temp = head
+        temp = self.head
         head = temp.next
         return temp
