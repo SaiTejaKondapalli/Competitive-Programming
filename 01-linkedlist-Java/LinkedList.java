@@ -31,6 +31,7 @@ public class LinkedList{
 		int count = 0;
 		Element curr = head;
 		while (curr.next != null) {
+			System.out.println("Test case" + curr.value);
 			if (count == position - 1) {
 				return curr;
 			}
@@ -73,6 +74,8 @@ public class LinkedList{
 			prev = curr;
 			curr = curr.next;
 		}
-		if (curr == null) return;
+		if (curr == null)
+			return;
+		prev.next = curr.next;
 	}
 }
