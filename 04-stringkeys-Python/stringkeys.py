@@ -20,7 +20,7 @@ class HashTable(object):
         Return -1 otherwise."""
         # Your code goes here
         # if self.calculate_hash_value(string) in self.table:
-        if self.calculate_hash_value(string):
+        if self.calculate_hash_value(string)!= None:
             return self.calculate_hash_value(string)
         return -1
 
