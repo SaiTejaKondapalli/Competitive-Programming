@@ -21,13 +21,10 @@ class LinkedList(object):
         # Your code goes here
         # new_element.next = self.head
         # self.head = new_element
-        if self.head == None:
-            self.head = new_element
-            new_element = None
-        else:
-            self.head.next = new_element
-            new_element.next = None
-
+        curr = self.head
+        while curr.next:
+            curr = curr.next
+        curr.next = new_element
 
     def get_position(self, position):
         """Get an element from a particular position.
@@ -39,7 +36,7 @@ class LinkedList(object):
         while temp != None:
             print(temp.value)
             if count == position - 1:
-                print(temp.value)
+                # print(temp.value)
                 return temp
             count += 1
             temp = temp.next
