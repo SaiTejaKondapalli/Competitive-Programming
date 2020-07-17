@@ -20,10 +20,10 @@ def getsum(n):
 	return summ
 def fun_nth_additive_prime(n):
 	count = 0
-	i = 0
+	i = 1
 	while True:
 		if isprime(i) and isprime(getsum(i)):
-			count += 1
 			if count == n:
 				return i
+			count += 1
 		i += 1
