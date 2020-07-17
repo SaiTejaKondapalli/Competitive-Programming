@@ -21,6 +21,7 @@ public class LinkedList{
 			temp = temp.next;
 		}
 		temp.next = new_element;
+		new_element.next = null;
 	}
 
 	public Element get_position(int position){
@@ -30,7 +31,7 @@ public class LinkedList{
 		// Your code goes here
 		int count = 0;
 		Element curr = head;
-		while (curr.next != null) {
+		while (curr != null) {
 			System.out.println(curr.value);
 			if (count == position - 1) {
 				return curr;
@@ -50,7 +51,7 @@ public class LinkedList{
 		// Your code goes here
 		int count = 0;
 		Element curr = head;
-		while (curr.next != null) {
+		while (curr != null) {
 			count += 1;
 			if (count == position - 1) {
 				Element temp = curr.next;
