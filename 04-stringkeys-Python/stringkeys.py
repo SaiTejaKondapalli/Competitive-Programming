@@ -20,14 +20,14 @@ class HashTable(object):
         string is already in the table.
         Return -1 otherwise."""
         # Your code goes here
-        if calculate_hash_value(string) in self.d:
-            return calculate_hash_value(string)
+        if self.calculate_hash_value(string) in self.d:
+            return self.calculate_hash_value(string)
         return -1
 
     def calculate_hash_value(self, string):
         """Helper function to calulate a
         hash value from a string."""
         # Your code goes here
-        return ord(s[0])*100+ord(s[1])
+        return ord(string[0])*100+ord(string[1])
 
 
