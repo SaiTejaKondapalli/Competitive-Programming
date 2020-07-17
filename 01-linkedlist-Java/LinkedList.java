@@ -16,6 +16,12 @@ public class LinkedList{
 
 	public void append(Element new_element){
 		// Your code goes here
+		Element temp = head;
+		while (temp.next != null) {
+			temp = temp.next;
+		}
+		temp.next = new_element;
+
 	}
 
 	public Element get_position(int position){
