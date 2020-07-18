@@ -17,7 +17,7 @@ class BST(object):
                 if self.root.right is None:
                     self.root.right.value = new_val
                 else:
-                    return insert(self.root.right, new_val)
+                    return BST.insert(self.root.right, new_val)
             else:
                 if self.root.left is None:
                     self.root.left.value = new_val
