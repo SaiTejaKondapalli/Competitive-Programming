@@ -17,10 +17,8 @@ def lookandsay(a):
 	for i in range(1,len(a)):
 		if a[i-1] == a[i]:
 			count += 1
-			if (i == len(a) - 1):
+		if (a[i-1] != a[i] or i ==len(a)-1):
 				flag = 1
-		else:
-			flag = 1
 		print(count)
 		if flag == 1:
 			l.append((count, a[i-1]))
