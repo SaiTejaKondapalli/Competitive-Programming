@@ -10,4 +10,9 @@
 
 def inverselookandsay(a):
 	# Your code goes here
-	pass
+	l = []
+	for each in a:
+		if len(each) == 0:
+			return l
+		l.extend([each[1]] * each[0])
+	return l
