@@ -15,5 +15,6 @@ def lookandsay(a):
 		if a[i] == a[i + 1]:
 			count += 1
 			continue
-		l.append(count, i)
+		l.append((count, i))
+		count = 0
 	print(l)
