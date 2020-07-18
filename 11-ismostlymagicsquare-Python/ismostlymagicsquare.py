@@ -31,18 +31,20 @@ def ismostlymagicsquare(a):
 		colsum = colsum[0]
 	else:
 		return False
+	if rowsum != colsum:
+		return False
 	diag1 = 0
 	diag2 = 0
 	for i in range(len(a)):
 		for j in range(len(a[0])):
 			if i == j:
 				diag1 += a[i][j]
-			if (i + j) == n - 1:
+			if (i + j) == len(a) - 1:
 				diag2 += a[i][j]
 	if diag1 != diag2:
 		return False
 	else:
-		if rowsum == colcum == diag1 == diag2:
+		if rowsum == colsum == diag1 == diag2:
 			return True
 		return False
 
