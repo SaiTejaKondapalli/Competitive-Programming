@@ -16,10 +16,11 @@
 def ismostlymagicsquare(a):
 	# Your code goes here
 	rowsum = list(map(sum, a))
-	if list(set(rowsum)) == 1:
+	if len(list(set(rowsum))) == 1:
 		rowsum = rowsum[0]
 	else:
 		return False
+	print(rowsum)
 	colsum = []
 	summ = 0
 	for i in range(len(a)):
@@ -27,10 +28,11 @@ def ismostlymagicsquare(a):
 			summ += a[j][i]
 		colsum.append(summ)
 		summ = 0
-	if list(set(colsum)) == 1:
+	if len(list(set(colsum))) == 1:
 		colsum = colsum[0]
 	else:
 		return False
+	print(colsum)
 	if rowsum != colsum:
 		return False
 	diag1 = 0
@@ -41,6 +43,7 @@ def ismostlymagicsquare(a):
 				diag1 += a[i][j]
 			if (i + j) == len(a) - 1:
 				diag2 += a[i][j]
+	print(diag1,diag2)
 	if diag1 != diag2:
 		return False
 	else:
