@@ -7,11 +7,11 @@
 
 def fun_alternatingsum(a):
 	res = 0
-	for i in a:
+	for i in range(len(a)):
 		if i % 2 == 0:
-			res += i
+			res += a[i]
 		else:
-			res -= i
+			res -= a[i]
 	return res
 
 
