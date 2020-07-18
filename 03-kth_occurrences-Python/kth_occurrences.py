@@ -6,6 +6,7 @@
 
 def fun_kth_occurrences(s, n):
 	l = list(s)
-	return sorted(list(set(l)),key = l.count,reverse=True)[n]
+	print(sorted(list(set(l)), key=l.count, reverse=True))
+
 
 
