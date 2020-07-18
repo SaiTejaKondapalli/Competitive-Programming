@@ -16,6 +16,35 @@
 def ismostlymagicsquare(a):
 	# Your code goes here
 	rowsum = list(map(sum, a))
-	print(rowsum)
-	# for i in range(len(a)):
-	# 	for j in range(len(a[0])):
+	if list(set(rowsum)) == 1:
+		rowsum = rowsum[0]
+	else:
+		return False
+	colsum = []
+	summ = 0
+	for i in range(len(a)):
+		for j in range(len(a[0])):
+			summ += a[j][i]
+		colsum.append(summ)
+		summ = 0
+	if list(set(colsum)) == 1:
+		colsum = colsum[0]
+	else:
+		return False
+	diag1 = 0
+	diag2 = 0
+	for i in range(len(a)):
+		for j in range(len(a[0])):
+			if i == j:
+				diag1 += a[i][j]
+			if (i + j) == n - 1:
+				diag2 += a[i][j]
+	if diag1 != diag2:
+		return False
+	else:
+		if rowsum == colcum == diag1 == diag2:
+			return True
+		return False
+
+
+
