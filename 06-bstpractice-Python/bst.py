@@ -10,22 +10,19 @@ class BST(object):
 
     def insert(self, new_val):
         # Your code goes here
-        self.inserNode(self.root, new_val)
+        self.insertNode(self.root, new_val)
 
     def insertNode(self,node,new_val):
-        if self.root is None:
-            self.root.value = new_val
-        else:
-            if self.root.value < new_val:
-                if self.root.right is None:
-                    self.root.right = Node(new_val)
-                else:
-                    return BST.insertNode(self.root.right, new_val)
+        if node.value < new_val:
+            if node.right is None:
+                node.right = Node(new_val)
             else:
-                if self.root.left is None:
-                    self.root.left = Node(new_val)
-                else:
-                    return BST.insertNode(self.root.left, new_val)
+                self.insertNode(node.right, new_val)
+        else:
+            if node.left is None:
+                node.left = Node(new_val)
+            else:
+                self.insertNode(node.left, new_val)
 
     def printSelf(self):
         # Your code goes here
@@ -36,15 +33,16 @@ class BST(object):
 
     def search(self, find_val):
         # Your code goes here
-        return BST.searchNode(self.root, find_val)
+        return self.searchNode(self.root, find_val)
 
     def searchNode(self,node,find_val):
         # print(BST.printSelf(self))
-        if self.root == None:
+        if node == None:
             return False
-        if self.root.value == find_val:
+        if node.value == find_val:
             return True
-        if self.root.value < find_val:
-            return BST.searchNode(self.root.left, find_val)
-        return BST.searchNode(self.root.right,find_val)
-
+        if node.value < find_val:
+            return self.searchNode(node.right, find_val)
+        if node.value > find_val:
+            return self.searchNode(node.left,find_val)
+        return False
