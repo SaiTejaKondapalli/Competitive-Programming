@@ -19,7 +19,7 @@ def helper(l, n, i, s):
 		return s
 	d = ""
 	for each in str(l[i]):
-		if each % 2 == 0:
+		if int(each) % 2 == 0:
 			d += each
 	if len(d) == 0:
 		s.append(0)
