@@ -18,7 +18,7 @@ def recursion_secondlargest(L):
 	if len(L) < 2:
 		return None
 	L.sort(reverse = True)
-	return helper(L, len(L), max(L), 0)
+	return helper(L, len(L), max(L), 1)
 def helper(L, n, maximum, i):
 	if i >= n:
 		return maximum
