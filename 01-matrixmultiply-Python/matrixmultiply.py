@@ -3,8 +3,9 @@
 # is the result of multiplying the two matrices. Return None if the
 # two matrices cannot be multiplied for any reason.
 
-
+import numpy as np
 def fun_matrixmultiply(m1, m2):
+    res = np.zeros([m1.length,m2[0].length])
     if m1[0].length != m2.length:
         return None
     else:
@@ -12,7 +13,7 @@ def fun_matrixmultiply(m1, m2):
             for j in range(m2[0].length):
                 for k in range(m2.length):
                     res[i][j] += m1[i][k] * m2[k][j]
-
+        return res
 
 
 
