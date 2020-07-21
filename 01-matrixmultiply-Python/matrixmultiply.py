@@ -5,7 +5,7 @@
 
 import numpy as np
 def fun_matrixmultiply(m1, m2):
-    res = np.zeros([len(m1),len(m2[0])])
+    res = np.zeros([len(m1),len(m2[0])],dtype = int)
     if len(m1[0]) != len(m2):
         return None
     else:
