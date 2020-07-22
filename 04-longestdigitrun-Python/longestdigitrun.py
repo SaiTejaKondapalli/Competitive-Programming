@@ -16,14 +16,12 @@ def longestdigitrun(n):
 			if s[i] != s[j]:
 				break
 			c += 1
-		m.append((s[i],c))
-		# if c >= count:
-		# 	if c == count:
-		# 		count = c
-		# 		m.append(s[i])
-		# 		res = min(s[i], min(m))
-		# 	else:
-		# 		count = c
-		# 		res = s[i]
-	print(m)
+		if c >= count:
+			if c == count:
+				count = c
+				m.append(s[i])
+				res = min(s[i], min(m))
+			else:
+				count = c
+				res = s[i]
 	return int(res)
