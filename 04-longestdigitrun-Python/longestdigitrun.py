@@ -10,15 +10,13 @@ def longestdigitrun(n):
 	res = s[0]
 	count = 0
 	m = []
-	i = 0
-	while i < len(s):
+	for i in range(len(s)):
 		c = 1
 		for j in range(i + 1, len(s)):
 			if s[i] != s[j]:
 				break
 			c += 1
-		if c > count:
+		if c >= count:
 			count = c
 			res = s[i]
-		i = j
 	return int(res)
