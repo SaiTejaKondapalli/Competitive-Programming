@@ -18,6 +18,7 @@ def longestdigitrun(n):
 			c += 1
 		if c >= count:
 			if c == count:
+				count = c
 				m.append(s[i])
 				res = min(s[i], min(m))
 			else:
