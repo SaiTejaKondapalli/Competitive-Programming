@@ -4,20 +4,19 @@
 # run, or the smallest such digit if there is a tie. So, longestDigitRun(117773732) returns 7 (
 # because there is a run of 3 consecutive 7's),
 # as does longestDigitRun(-677886).
-from collections import defaultdict
 def longestdigitrun(n):
 	# Your code goes here
 	s = str(abs(n))
 	res = s[0]
 	count = 0
-	m = defaultdict()
+	m = []
 	for i in range(len(s)):
 		c = 1
 		for j in range(i + 1, len(s)):
 			if s[i] != s[j]:
 				break
 			c += 1
-		m[c].append(s[i])
+		m.append((s[i],c))
 		# if c >= count:
 		# 	if c == count:
 		# 		count = c
@@ -26,5 +25,5 @@ def longestdigitrun(n):
 		# 	else:
 		# 		count = c
 		# 		res = s[i]
-		print(m)
+	print(m)
 	return int(res)
