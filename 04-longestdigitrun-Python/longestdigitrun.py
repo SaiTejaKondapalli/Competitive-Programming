@@ -9,13 +9,18 @@ def longestdigitrun(n):
 	s = str(abs(n))
 	res = s[0]
 	count = 0
-	for i in range(len(l)):
+	m = []
+	for i in range(len(s)):
 		c = 1
-		for j in range(i + 1, len(l)):
-			if str[i] != str[j]:
+		for j in range(i + 1, len(s)):
+			if s[i] != s[j]:
 				break
 			c += 1
-		if c > count:
-			count = c
-			res = str[i]
-	return res
+		if c >= count:
+			if c == count:
+				m.append(s[i])
+				res = min(s[i], min(m))
+			else:
+				count = c
+				res = s[i]
+	return int(res)
