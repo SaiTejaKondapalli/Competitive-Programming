@@ -10,5 +10,5 @@ def sumofsquaresofdigit(n):
 	while n != 0:
 		num = n % 10
 		summ += num ** 2
-		num = num // 10
+		n = n // 10
 	return summ
