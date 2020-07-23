@@ -11,7 +11,7 @@ import math
 
 def fun_nth_kaprekarnumber(n):
     if n == 0:
-        return 0
+        return 1
     i = 1
     while True:
         count = 0
