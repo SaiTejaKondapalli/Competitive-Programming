@@ -21,6 +21,8 @@ def fun_nth_kaprekarnumber(n):
         for j in range(1, length):
             left = int("".join(sq[:j]))
             right = int("".join(sq[j:]))
+            if right == 0:
+                continue
             if left + right == i:
                 if count == n:
                     return i
