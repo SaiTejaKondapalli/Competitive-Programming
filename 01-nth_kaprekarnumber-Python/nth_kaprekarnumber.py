@@ -13,8 +13,8 @@ def fun_nth_kaprekarnumber(n):
     if n == 0:
         return 1
     i = 1
+    count = 1
     while True:
-        count = 0
         square = i ** 2
         sq = str(square)
         length = len(str(sq))
@@ -23,5 +23,6 @@ def fun_nth_kaprekarnumber(n):
             right = int("".join(sq[j:]))
             if left + right == i:
                 if count == n:
-                    return j
+                    return i
+                count += 1
         i += 1
