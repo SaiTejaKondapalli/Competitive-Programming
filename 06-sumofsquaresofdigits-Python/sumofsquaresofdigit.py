@@ -1,4 +1,4 @@
-# Write the function sumOfSquaresOfDigits(n) which takes a non-negative integer and returns the 
+# Write the function sumOfSquaresOfDigits(n) which takes a non-negative integer and returns the
 # sum of the squares of its digits. Here are some test assertions for you:
 # assert(sumOfSquaresOfDigits(5) == 25)   # 5**2 = 25
 # assert(sumOfSquaresOfDigits(12) == 5)   # 1**2 + 2**2 = 1+4 = 5
@@ -6,4 +6,9 @@
 
 def sumofsquaresofdigit(n):
 	# Your code goes here
-	pass
+	summ = 0
+	while n != 0:
+		num = n % 10
+		summ += num ** 2
+		num = num // 10
+	return summ
