@@ -23,6 +23,8 @@ def fun_nearestkaprekarnumber(n):
         for j in range(1, len(sq)):
             left = int("".join(sq[:j]))
             right = int("".join(sq[j:]))
+            if right == 0:
+                continue
             if left + right == i:
                 flag = 1
                 d1 = i
@@ -38,6 +40,8 @@ def fun_nearestkaprekarnumber(n):
         for j in range(1, len(sq)):
             left = int("".join(sq[:j]))
             right = int("".join(sq[j:]))
+            if right == 0:
+                continue
             if left + right == k:
                 flag = 1
                 d2 = k
@@ -46,7 +50,7 @@ def fun_nearestkaprekarnumber(n):
             break
         k -= 1
     if abs(d1 - n) == abs(d2 - n):
-        return d1
+        return d2
     if abs(d1 - n) > abs(d2 - n):
         return d2
     else:
