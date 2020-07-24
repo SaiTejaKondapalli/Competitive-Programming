@@ -28,16 +28,14 @@ def truncatableprime(n):
     s = str(n)
     if "0" in s:
         return False
+    if len(s) == 1 and isprime(n):
+        return True
     count = 0
     for i in range(1, len(s)):
         if not isprime(int(s[i:])):
             return False
         else:
             count += 1
-    if len(s) == 1 and isprime(int(s)):
-        return True
-    else:
-        return False
     if count == len(s) - 1:
         return True
 
