@@ -25,23 +25,25 @@ def isprime(n):
     #         count += 1
     # return count == 2
 def truncatableprime(n):
-    s = str(n)
-    if "0" in s:
+    if "0" in str(n):
         return False
-    if len(s) == 1 and isprime(n):
-        return True
-    else:
-        return False
-    for i in range(1, len(s)):
-        if not isprime(int(s[i:])):
+    if len(str(n)) == 1:
+        return isprime(n)
+    while len(str(n)) > 1:
+        i = int(str(n)[1:])
+        if not isprime(i):
             return False
     return True
+    # for i in range(1, len(s)):
+    #     if not isprime(int(s[i:])):
+    #         return False
+    # return True
 
 def fun_nth_lefttruncatableprime(n):
     i = 1
     count = 0
     while True:
-        if truncatableprime(i):
+        if truncatableprime(i) and isprime(i):
             if count == n:
                 return i
             count += 1
