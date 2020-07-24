@@ -30,6 +30,8 @@ def truncatableprime(n):
         return False
     if len(s) == 1 and isprime(n):
         return True
+    else:
+        return False
     count = 0
     for i in range(1, len(s)):
         if not isprime(int(s[i:])):
