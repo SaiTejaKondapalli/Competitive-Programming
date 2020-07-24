@@ -7,7 +7,15 @@
 # yet covered lists, sets, maps, or efficiency, you are not expected to write the most efficient solution. Finally,
 # if s does not contain any alphabetic characters, the result should be the empty string ("")
 
+from collections import Counter
 def leastfrequentletters(s):
 	# Your code goes here
-	if not s.isalpha():
-		return ""
+	# if not s.isalpha():
+	# 	return ""
+	string = ""
+	for each in s.lower():
+		if each.isalpha():
+			string += each
+	d = Counter(list(string))
+	res = [k for k, v in d.items() if v == min(d.values())]
+	return "".join(res)
