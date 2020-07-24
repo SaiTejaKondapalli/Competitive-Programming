@@ -13,7 +13,7 @@ def istidy(n):
 
 def fun_nth_tidynumber(n):
     count = 0
-    i = 0
+    i = 1
     while True:
         if istidy(i):
             if count == n:
