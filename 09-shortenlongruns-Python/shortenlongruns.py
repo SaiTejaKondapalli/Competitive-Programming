@@ -21,5 +21,5 @@ def shortenlongruns(L, k):
 		if count < k:
 			res.append(L[i])
 	if L[-1] != L[-2]:
-		res.append(L[i])
+		res.append(L[-1])
 	return res
