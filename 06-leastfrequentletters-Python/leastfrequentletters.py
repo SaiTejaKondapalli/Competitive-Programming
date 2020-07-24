@@ -16,6 +16,6 @@ def leastfrequentletters(s):
 	for each in s.lower():
 		if each.isalpha():
 			string += each
-	d = Counter(list(string))
+	d = Counter(sorted(list(string)))
 	res = [k for k, v in d.items() if v == min(d.values())]
 	return "".join(res)
