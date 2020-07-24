@@ -32,14 +32,10 @@ def truncatableprime(n):
         return True
     else:
         return False
-    count = 0
     for i in range(1, len(s)):
         if not isprime(int(s[i:])):
             return False
-        else:
-            count += 1
-    if count == len(s) - 1:
-        return True
+    return True
 
 def fun_nth_lefttruncatableprime(n):
     i = 1
