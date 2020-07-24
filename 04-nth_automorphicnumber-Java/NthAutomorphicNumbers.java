@@ -4,16 +4,15 @@
 // 76 and 890625 are all automorphic numbers.
 public class NthAutomorphicNumbers {
 	public boolean isautomorphic(int n){
-		String s1 = Integer.toString(n);
-		int l1 = s1.length();
 		int sq = n * n;
-		String s2 = Integer.toString(sq);
-		int l2 = s2.length();
-		String s3 = s2.substring(l2-l1);
-		if(s1.equals(s3)){
-			return true;
+		while(n > 0){
+			if(n%10!=sq%10){
+				return false;
+			}
+			n /= 10;
+			sq /= 10;
 		}
-		return false;
+		return true;
 	}
 	public long nthAutomorphicNumbers(int n) {
 		// Your code goes here
