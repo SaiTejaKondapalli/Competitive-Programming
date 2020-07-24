@@ -39,4 +39,6 @@ def isprime(n):
 
 def ishappyprimenumber(n):
     # Your code goes here
-    pass
+    if ishappy(n) and isprime(n):
+        return True
+    return False
