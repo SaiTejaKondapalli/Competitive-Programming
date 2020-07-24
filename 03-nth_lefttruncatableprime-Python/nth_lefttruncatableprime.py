@@ -30,14 +30,10 @@ def truncatableprime(n):
     if len(str(n)) == 1:
         return isprime(n)
     while len(str(n)) > 1:
-        i = int(str(n)[1:])
-        if not isprime(i):
+        n = int(str(n)[1:])
+        if not isprime(n):
             return False
     return True
-    # for i in range(1, len(s)):
-    #     if not isprime(int(s[i:])):
-    #         return False
-    # return True
 
 def fun_nth_lefttruncatableprime(n):
     i = 1
