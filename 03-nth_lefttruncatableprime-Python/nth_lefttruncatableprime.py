@@ -9,11 +9,21 @@
 
 import math
 def isprime(n):
-    count = 0
-    for i in range(1,n+1):
+    if n < 2:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    for i in range(3, int(math.sqrt(n)) + 1, 2):
         if n % i == 0:
-            count += 1
-    return count == 2
+            return False
+    return True
+    # count = 0
+    # for i in range(1,n+1):
+    #     if n % i == 0:
+    #         count += 1
+    # return count == 2
 def truncatableprime(n):
     s = str(n)
     if "0" in s:
