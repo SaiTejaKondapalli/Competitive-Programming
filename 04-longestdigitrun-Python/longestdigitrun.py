@@ -20,5 +20,5 @@ def longestdigitrun(n):
 			res = s[i]
 		if c == count:
 			if res > s[i]:
-				res =s[i]
+				res = s[i]
 	return int(res)
