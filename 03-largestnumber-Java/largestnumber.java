@@ -10,7 +10,12 @@
 
 class largestnumber {
 	public int fun_largestnumber(String s){
-		s = s.replaceAll("[^0-9]","");
+		s = s.replaceAll("[^0-9]"," ");
+		s = s.trim();
+		s = s.replaceAll(" +"," ");
+		if(s.equals("")){
+			return 0;
+		}
 		String[] arr = s.split(" ");
 		int max = 0;
 		for(String each : arr){
