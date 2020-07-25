@@ -32,7 +32,7 @@ class nthtenlyprime {
 		int i = 1;
 		int count = 0;
 		while(true){
-			if(isprime(n) && sumofdigits(n) == 10){
+			if(isprime(i) && sumofdigits(i) == 10){
 				if(count == n){
 					return i;
 				}
@@ -40,5 +40,8 @@ class nthtenlyprime {
 			}
 			i += 1;
 		}
+	}
+	public static void main(String[] args) {
+
 	}
 }
