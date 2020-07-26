@@ -28,6 +28,6 @@ def longestcommonsubstring(s1, s2):
     if len(s) == 0:
         return ""
     else:
-        l = [x for x in s if len(s) == max(s, key=len)]
+        l = [x for x in s if len(x) == len(max(s, key=len))]
         print(l)
         return max(s,key = len)
