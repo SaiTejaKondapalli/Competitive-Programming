@@ -11,9 +11,9 @@ def fixmostlymagicsquare(L):
 	s = []
 	for i in L:
 		s.append(sum(i))
-	index = s.index(min(s))
+	index = s.index(min(s,key = count))
+	print(s)
 	print(index)
-	print(s[index])
 	print(s[index],s[index+1])
 	diff = s[index] - s[index + 1]
 	print(diff)
