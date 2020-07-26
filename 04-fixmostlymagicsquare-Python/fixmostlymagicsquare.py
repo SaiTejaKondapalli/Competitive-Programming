@@ -16,4 +16,4 @@ def fixmostlymagicsquare(L):
 	diff = s[index] - s[index + 1]
 	L[index][-1] = L[index][-1] - diff
 	print(s)
-	return s
+	return L
