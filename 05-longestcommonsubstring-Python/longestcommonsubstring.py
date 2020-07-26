@@ -22,7 +22,8 @@ def longestcommonsubstring(s1, s2):
     for i in range(1,len(str1)):
         res += str1[i]
         if res in str2:
-            s.append(res)
+            if max(s, key=len) < res:
+                s.append(res)
         else:
             res = str1[i]
     if len(s) == 0:
