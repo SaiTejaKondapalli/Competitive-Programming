@@ -18,8 +18,8 @@ def longestcommonsubstring(s1, s2):
         str1 = s1
         str2 = s2
     res = str1[0]
-    s = []
-    for i in range(1,len(s1)):
+    s = ['']
+    for i in range(1,len(str1)):
         res += str1[i]
         if res in str2:
             s.append(res)
