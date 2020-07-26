@@ -5,18 +5,15 @@
 # L, return a new list M such that M is the same as L, only with exactly one value changed, and M is a mostly magic
 # square.
 
-
+from collections import Counter
 def fixmostlymagicsquare(L):
 	# Your code goes here
 	s = []
 	for i in L:
 		s.append(sum(i))
-	index = s.index(min(s,key = count))
-	print(s)
-	print(index)
-	print(s[index],s[index+1])
+	c = Counter(s)
+	index = s.index(min(s,key = c.get))
 	diff = s[index] - s[index + 1]
-	print(diff)
-	s[index][-1] = s[index][-1] - diff
+	L[index][-1] = L[index][-1] - diff
 	print(s)
 	return s
