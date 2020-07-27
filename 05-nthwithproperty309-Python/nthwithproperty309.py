@@ -9,8 +9,8 @@ def nthwithproperty309(n):
 	count = 0
 	i = 309
 	while True:
-		l = "".join(sorted(list(str(i ** 5))))
-		if "0123456789" in l:
+		l = str(pow(i,5))
+		if "0" in l and "1" in l and "2" in l and "3" in l and "4" in l and "5" in l and "6" in l and "7" in l and "8" in l and "9" in l:
 			if count == n:
 				return i
 			count += 1
