@@ -12,8 +12,8 @@ def nthwithproperty309(n):
 	i = 310
 	while True:
 		l = str(pow(i,5))
-		# if "0" in l and "1" in l and "2" in l and "3" in l and "4" in l and "5" in l and "6" in l and "7" in l and "8" in l and "9" in l:
-		if "[0-9]" in l:
+		if "0" in l and "1" in l and "2" in l and "3" in l and "4" in l and "5" in l and "6" in l and "7" in l and "8" in l and "9" in l:
+		# if "[0-9]" in l:
 			count += 1
 			if count == n:
 				return i
